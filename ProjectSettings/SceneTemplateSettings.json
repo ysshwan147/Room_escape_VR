@@ -148,7 +148,6 @@
             "defaultInstantiationMode": 0,
             "supportsModification": true
         },
-        {
             "userAdded": false,
             "type": "UnityEngine.Timeline.TimelineAsset",
             "ignore": false,
@@ -165,3 +164,4 @@
     },
     "newSceneOverride": 0
 }
+        {
