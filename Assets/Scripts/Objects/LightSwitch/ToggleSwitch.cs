@@ -3,6 +3,7 @@ using UnityEngine;
 public class ToggleSwitch : MonoBehaviour
 {
     public bool isOn = false;
+    public Subtitle subtitle;
 
     private void Start()
     {
@@ -12,6 +13,7 @@ public class ToggleSwitch : MonoBehaviour
     public void SelectEntered()
     {
         ToggleLightOnOff();
+        ActivateSubtitle();
     }
 
 
@@ -31,5 +33,16 @@ public class ToggleSwitch : MonoBehaviour
         }
 
         transform.eulerAngles = eulerAngle;
+    }
+
+    private void ActivateSubtitle()
+    {
+        if (isOn)
+        {
+            if (subtitle != null)
+            {
+                subtitle.gameObject.SetActive(true);
+            }
+        }
     }
 }
