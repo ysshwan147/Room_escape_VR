@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 439108}
   - component: {fileID: 3339616}
   - component: {fileID: 2320474}
+  - component: {fileID: 2466413096983478827}
   m_Layer: 0
   m_Name: corpse_drawer_table
   m_TagString: Untagged
@@ -390,6 +391,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2466413096983478827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157752}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 61.390656, y: 1.82, z: 194.97072}
+  m_Center: {x: -0.00009346008, y: -1.59, z: 0.00017929077}
 --- !u!1 &407324433785383923
 GameObject:
   m_ObjectHideFlags: 0

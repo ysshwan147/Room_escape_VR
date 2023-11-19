@@ -5,8 +5,8 @@ using UnityEngine;
 public class DrawerSwitchInteraction : MonoBehaviour
 {
     public Transform hinge; // 경첩의 위치를 나타내는 빈 GameObject
-    public float rotationAngle = 90f; // 회전 각도
-    public float rotationSpeed = 5f; // 회전 속도
+    public float rotationAngle = -90f; // 회전 각도
+    public float rotationSpeed = 0.5f; // 회전 속도
 
     private void Start()
     {
