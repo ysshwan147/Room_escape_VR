@@ -28,7 +28,7 @@ public class Photo : MonoBehaviour
         float elapsedTime = 0;
         while (elapsedTime < seconds)
         {
-            transform.position += transform.forward * Time.deltaTime * 0.1f;
+            transform.position += transform.forward * Time.deltaTime * 0.05f;
             elapsedTime += Time.deltaTime;
 
             yield return null;

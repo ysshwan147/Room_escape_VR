@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 316805852865742728}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.06, y: -0.25, z: -0.18}
+  m_LocalPosition: {x: -0.06, y: -0.241, z: -0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,10 +76,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 111.745346
-  m_InnerSpotAngle: 103.54747
+  m_Intensity: 30
+  m_Range: 30
+  m_SpotAngle: 85
+  m_InnerSpotAngle: 80
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -159,8 +159,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2034179033855149244}
   - component: {fileID: 5678691299480998959}
-  - component: {fileID: 7338578061436768995}
   - component: {fileID: 4326612254229611174}
+  - component: {fileID: 7338578061436768995}
   m_Layer: 0
   m_Name: LomoCamera
   m_TagString: Untagged
@@ -178,7 +178,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6431263152166169586}
@@ -215,6 +215,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &4326612254229611174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034179033855149247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cdc097b6a339e43b315b1a5b0bbd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photoPrefab: {fileID: 8198328580105296239, guid: 69175e7d1e8a9c24babaabdf0f6c5185, type: 3}
+  screenRenderer: {fileID: 2992897179092601354}
+  spawnLocation: {fileID: 5734613994749567669}
+  flashLight: {fileID: 2038292591362901628}
 --- !u!114 &7338578061436768995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,22 +415,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &4326612254229611174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034179033855149247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cdc097b6a339e43b315b1a5b0bbd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photoPrefab: {fileID: 8198328580105296239, guid: 69175e7d1e8a9c24babaabdf0f6c5185, type: 3}
-  screenRenderer: {fileID: 2992897179092601354}
-  spawnLocation: {fileID: 5734613994749567669}
-  flashLight: {fileID: 2038292591362901628}
 --- !u!1 &2140968079356339104
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,8 +480,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.11
-  far clip plane: 1000
+  near clip plane: 0.035
+  far clip plane: 300
   field of view: 60
   orthographic: 0
   orthographic size: 5

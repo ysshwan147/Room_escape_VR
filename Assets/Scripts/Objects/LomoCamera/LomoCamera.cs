@@ -33,6 +33,7 @@ public class LomoCamera : MonoBehaviour
     public void TakePhoto()
     {
         Photo newPhoto = CreatePhoto();
+
         flashLight.enabled = true;
         SetPhotoImage(newPhoto);
         flashLight.enabled = false;
