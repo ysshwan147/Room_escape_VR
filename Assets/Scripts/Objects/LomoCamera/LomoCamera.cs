@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class Polaroid : MonoBehaviour
+public class LomoCamera : MonoBehaviour
 {
     public GameObject photoPrefab = null;
     public MeshRenderer screenRenderer = null;
     public Transform spawnLocation = null;
+    public Light flashLight = null;
 
     private Camera renderCamera = null;
 
@@ -15,6 +16,7 @@ public class Polaroid : MonoBehaviour
 
     private void Start()
     {
+        flashLight.enabled = false;
         CreateRenderTexture();
         TurnOff();
     }
@@ -31,7 +33,9 @@ public class Polaroid : MonoBehaviour
     public void TakePhoto()
     {
         Photo newPhoto = CreatePhoto();
+        flashLight.enabled = true;
         SetPhotoImage(newPhoto);
+        flashLight.enabled = false;
     }
 
     private Photo CreatePhoto()
