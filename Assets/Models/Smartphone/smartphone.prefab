@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23136804176431804}
   - component: {fileID: 2393515980047111571}
   - component: {fileID: 5873667975418357922}
+  - component: {fileID: 8711291385151851646}
   - component: {fileID: 2984954264591663181}
   m_Layer: 0
   m_Name: smartphone
@@ -137,6 +138,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &8711291385151851646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191933010613832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5579530dcf65947178ebae3a34b2fcdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenRenderer: {fileID: 23136804176431804}
+  lightOffMat: {fileID: 2100000, guid: d4fc12dc9beafa44e9f614b7b6ef70c7, type: 2}
+  lightOnMat: {fileID: 2100000, guid: 479f520da2e204bcead2ed3709e2f561, type: 2}
 --- !u!114 &2984954264591663181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +224,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7806611910071733429}
         m_TargetAssemblyTypeName: ToggleLight, Assembly-CSharp
+        m_MethodName: Activated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8711291385151851646}
+        m_TargetAssemblyTypeName: TogglePhoneScreen, Assembly-CSharp
         m_MethodName: Activated
         m_Mode: 1
         m_Arguments:
