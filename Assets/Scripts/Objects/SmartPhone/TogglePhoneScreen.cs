@@ -6,16 +6,23 @@ public class TogglePhoneScreen : MonoBehaviour
     public Material lightOffMat;
     public Material lightOnMat;
 
-    private bool isOn = false;
+    public bool isOn = false;
+
+    private Material[] mats;
     // Start is called before the first frame update
     void Start()
     {
+        mats = new Material[2];
+        mats[0] = screenRenderer.materials[0];
+
         setScreenMat();
     }
 
     public void Activated()
     {
         ToggleScreen();
+        Debug.Log(screenRenderer.materials[0]);
+        Debug.Log(screenRenderer.materials[1]);
     }
 
 
@@ -29,10 +36,12 @@ public class TogglePhoneScreen : MonoBehaviour
     private void setScreenMat()
     {
         if (isOn) {
-            screenRenderer.materials[1] = lightOnMat;
+            mats[1] = lightOnMat;
+            screenRenderer.materials = mats;
         }
         else {
-            screenRenderer.materials[1] = lightOffMat;
+            mats[1] = lightOffMat;
+            screenRenderer.materials = mats;
         }
     }
 }
