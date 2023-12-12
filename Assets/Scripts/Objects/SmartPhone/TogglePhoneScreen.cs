@@ -21,8 +21,6 @@ public class TogglePhoneScreen : MonoBehaviour
     public void Activated()
     {
         ToggleScreen();
-        Debug.Log(screenRenderer.materials[0]);
-        Debug.Log(screenRenderer.materials[1]);
     }
 
 
