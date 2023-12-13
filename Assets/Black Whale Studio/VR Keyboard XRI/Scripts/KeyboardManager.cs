@@ -83,9 +83,9 @@ namespace Keyboard
 
             speechButton.interactable = false;
             
-            numbersKeyboard.SetActive(false);
+            numbersKeyboard.SetActive(true);
             specialCharactersKeyboard.SetActive(false);
-            lettersKeyboard.SetActive(true);
+            lettersKeyboard.SetActive(false);
 
             spacebarButton.onClick.AddListener(OnSpacePress);
             deleteButton.onClick.AddListener(OnDeletePress);
@@ -97,7 +97,7 @@ namespace Keyboard
             keyChannel.RaiseKeyColorsChangedEvent(normalColor, highlightedColor, pressedColor, selectedColor);
             
             switchNumberSpecialButton.gameObject.SetActive(false);
-            numbersKeyboard.SetActive(false);
+            numbersKeyboard.SetActive(true);
             specialCharactersKeyboard.SetActive(false);
 
             if (!autoCapsAtStart) return;
