@@ -5,9 +5,11 @@ using UnityEngine;
 public class HiddenSpaceAnchor : MonoBehaviour
 {
     public float rotationSpeed = 10.0f;
+    public PlayEffectSound sound;
 
     public void openTrigger()
     {
+        sound.Play();
         StartCoroutine(RotateDoor());
     }
 
@@ -24,5 +26,7 @@ public class HiddenSpaceAnchor : MonoBehaviour
 
         // 정확한 각도로 설정하여 오차를 보정합니다.
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, targetRotation, transform.rotation.eulerAngles.z);
+
+        sound.Stop();
     }
 }

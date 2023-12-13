@@ -8,7 +8,7 @@ public class CheckBookClean : MonoBehaviour
 
     private void Update()
     {
-        if (cleanCount >= 12)
+        if (cleanCount >= 1)
         {
             // do something
         }
