@@ -9,7 +9,6 @@ public class HiddenSpaceAnchor : MonoBehaviour
     public void openTrigger()
     {
         sound.Play();
-        Debug.Log("Play");
         StartCoroutine(RotateDoor());
     }
 
@@ -28,6 +27,5 @@ public class HiddenSpaceAnchor : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, targetRotation, transform.rotation.eulerAngles.z);
 
         sound.Stop();
-        Debug.Log("Stop");
     }
 }
