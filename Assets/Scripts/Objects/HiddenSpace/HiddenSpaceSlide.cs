@@ -5,9 +5,11 @@ public class HiddenSpaceSlide : MonoBehaviour
 {
     public float targetSlide = -1.899f;
     public float slideSpeed = 2.0f;
+    public PlayEffectSound sound;
 
     public void openTrigger()
     {
+        sound.Play();
         StartCoroutine(SlideDoor());
     }
 
@@ -25,5 +27,7 @@ public class HiddenSpaceSlide : MonoBehaviour
 
         // 정확한 위치로 설정하여 오차를 보정합니다.
         transform.position = new Vector3(targetXPosition, transform.position.y, transform.position.z);
+
+        sound.Stop();
     }
 }
