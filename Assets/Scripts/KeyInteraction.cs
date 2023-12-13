@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class KeyInteraction : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public string nextScene = "OfficeRoom";
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("key"))
+        if (collision.collider.CompareTag("key"))
         {
-            // Specific event logic here
-            Debug.Log("Key has touched the object!");
+            Debug.Log("Ãæµ¹");
+            LoadingSceneController.LoadScene(nextScene);
         }
     }
 }
