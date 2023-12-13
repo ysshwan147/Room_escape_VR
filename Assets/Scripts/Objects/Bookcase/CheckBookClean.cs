@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class CheckBookClean : MonoBehaviour
 {
+    public HiddenSpaceSlide hiddenSpace;
+
     private int cleanCount = 0;
 
     private void Update()
     {
         if (cleanCount >= 12)
         {
-            // do something
+            hiddenSpace.openTrigger();
+
+            enabled = false;
         }
     }
 
