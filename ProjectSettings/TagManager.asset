@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - key
+  - keyboard
   layers:
   - Default
   - TransparentFX
