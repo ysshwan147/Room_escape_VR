@@ -75,8 +75,12 @@ namespace Keyboard
 
         public UnityEvent onKeyboardModeChanged;
 
+        private Computer computer;
+
         private void Awake()
         {
+            computer = transform.parent.GetComponent<Computer>();
+
             shiftButtonColors = shiftButton.colors;
             
             CheckTextLength();
@@ -89,6 +93,7 @@ namespace Keyboard
 
             spacebarButton.onClick.AddListener(OnSpacePress);
             deleteButton.onClick.AddListener(OnDeletePress);
+            enterButton.onClick.AddListener(OnEnterPress);
             switchButton.onClick.AddListener(OnSwitchPress);
             shiftButton.onClick.AddListener(OnShiftPress);
             switchNumberSpecialButton.onClick.AddListener(SwitchBetweenNumbersAndSpecialCharacters);
@@ -109,6 +114,7 @@ namespace Keyboard
         {
             spacebarButton.onClick.RemoveListener(OnSpacePress);
             deleteButton.onClick.RemoveListener(OnDeletePress);
+            enterButton.onClick.RemoveListener(OnEnterPress);
             switchButton.onClick.RemoveListener(OnSwitchPress);
             shiftButton.onClick.RemoveListener(OnShiftPress);
             switchNumberSpecialButton.onClick.RemoveListener(SwitchBetweenNumbersAndSpecialCharacters);
@@ -182,6 +188,21 @@ namespace Keyboard
             }
             
             CheckTextLength();
+        }
+
+
+        private void OnEnterPress()
+        {
+            var answer = outputField.text;
+            if (string.IsNullOrEmpty(outputField.text)) return;
+
+            outputField.text = "";
+
+            if (string.IsNullOrEmpty(answer)) return;
+
+            computer.login(answer);
+
+                CheckTextLength();
         }
 
         private void CheckTextLength()
