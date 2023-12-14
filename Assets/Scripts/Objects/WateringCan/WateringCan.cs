@@ -8,11 +8,14 @@ public class WateringCan : MonoBehaviour
     public float maxAngle = 60.0f;
 
     private ParticleSystem.EmissionModule particleEmission;
+    private AudioSource audioSource;
+    private bool isPlaying = false;
 
     // Start is called before the first frame update
     void Start()
     {
         particleEmission = particleSystemObject.GetComponent<ParticleSystem>().emission;
+        audioSource = GetComponent<AudioSource>();
 
         wateringOff();
     }
@@ -26,18 +29,35 @@ public class WateringCan : MonoBehaviour
         if (angle <= minAngle)
         {
             particleEmission.rateOverTime = 0.0f;
+
+            if (isPlaying)
+            {
+                audioSource.Stop();
+                isPlaying = false;
+            }
         }
         else if (angle > minAngle && angle <= maxAngle)
         {
             var tempAngle = angle - minAngle;
 
             particleEmission.rateOverTime = tempAngle * (maxAmount / (maxAngle - minAngle));
+
+            if (!isPlaying)
+            {
+                audioSource.Play();
+                isPlaying = true;
+            }
         }
         else if (angle > maxAngle)
         {
             particleEmission.rateOverTime = maxAmount;
-        }
 
+            if (!isPlaying)
+            {
+                audioSource.Play();
+                isPlaying = true;
+            }
+        }
     }
 
     public void wateringOn()
