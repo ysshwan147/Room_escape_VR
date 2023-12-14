@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class TextFollowCamera : MonoBehaviour
 {
-    public Camera playerCamera; // »ç¿ëÀÚ°¡ º¸´Â Ä«¸Þ¶ó
+    public Camera playerCamera; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½
 
     void Update()
     {
-        // Ä«¸Þ¶óÀÇ À§Ä¡¿Í È¸Àü°ªÀ» ±âÁØÀ¸·Î ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
-        transform.position = playerCamera.transform.position + playerCamera.transform.forward*0.5f; // ¿¹½Ã·Î Ä«¸Þ¶ó¿¡¼­ ÀÏÁ¤ °Å¸® ¾Õ¿¡ ¹èÄ¡
+        // Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+        transform.position = playerCamera.transform.position + playerCamera.transform.forward; // ï¿½ï¿½ï¿½Ã·ï¿½ Ä«ï¿½Þ¶ó¿¡¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½Õ¿ï¿½ ï¿½ï¿½Ä¡
 
-        // Ä«¸Þ¶óÀÇ ¹æÇâÀ» °¡Á®¿Í¼­ ÅØ½ºÆ®°¡ ¹Ù¶óº¸°Ô ¼³Á¤
+        // Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½Ù¶óº¸°ï¿½ ï¿½ï¿½ï¿½ï¿½
         transform.rotation = Quaternion.LookRotation(playerCamera.transform.forward, playerCamera.transform.up);
     }
 }

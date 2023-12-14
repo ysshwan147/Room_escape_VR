@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12441,6 +12441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 593926392442137461, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 963525226180919832, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12523,23 +12527,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: storyMessages.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: storyMessages.Array.data[0]
-      value: "\uC774\uBC88 \uC2DC\uD5D8\uB3C4 \uB9DD\uD574\uBC84\uB9AC\uB2E4\uB2C8..."
+      value: "\uC2DC\uD5D8\uC744 \uB610 \uB9DD\uCCE4\uB2E4"
       objectReference: {fileID: 0}
     - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: storyMessages.Array.data[1]
-      value: "\uB2E4\uC74C \uC2DC\uD5D8\uC740 \uAF2D \uC798 \uBD10\uC57C\uD558\uB294\uB370..."
+      value: "\uB2E4\uC74C \uACFC\uBAA9\uAE4C\uC9C0 \uB9DD\uCE60 \uC21C \uC5C6\uC5B4 "
       objectReference: {fileID: 0}
     - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: storyMessages.Array.data[2]
-      value: "\uC73C\uC544\uC559~"
+      value: "\uC2DC\uD5D8\uC9C0\uB97C \uD6D4\uCCD0\uC11C\uB77C\uB3C4 A+\uC744 \uBC1B\uC544\uC57C
+        \uD574"
       objectReference: {fileID: 0}
     - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: storyMessages.Array.data[3]
-      value: '#######################'
+      value: "\uAD50\uC218\uC2E4\uC5D0 \uC7A0\uC785\uD558\uC790...!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488373642044318933, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
+      propertyPath: storyMessages.Array.data[4]
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 7321738411825366594, guid: 0e45bbd994e8b9342888b658f26e3597, type: 3}
       propertyPath: m_Name
